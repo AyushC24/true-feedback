@@ -2,9 +2,9 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
-import React, { useDebugValue, useEffect, useState } from 'react'
+import React, {  useEffect, useState } from 'react'
 import Link from "next/link"
-import { useDebounceValue, useDebounceCallback } from 'usehooks-ts'
+import { useDebounceCallback } from 'usehooks-ts'
 import { useToast } from "@/components/ui/use-toast"
 import { useRouter } from "next/navigation"
 import { signUpSchema } from "@/schemas/signUpSchema"
@@ -66,7 +66,7 @@ const Page = () => {
         checkUsernameUnique();
     },[username]);
 
-
+      //data form ka data h jo user ne fill kiya hoga
     const onSubmit = async(data: z.infer<typeof signUpSchema>)=>{
       setIsSubmitting(true);
       try{
