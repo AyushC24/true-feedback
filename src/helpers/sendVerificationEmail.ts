@@ -90,7 +90,7 @@ export async function sendVerificationEmail(
     await transporter.sendMail({
       from: "ayushchandra73@gmail.com", // Your email address
       to: email,
-      subject: 'Feedonymous Yours TrueFeedBack Verification Code',
+      subject: 'Feedonymous Yours TrueFeedback Verification Code',
       html: emailContent
     });
 
