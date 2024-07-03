@@ -15,7 +15,7 @@ const MessageSchema: Schema<Message> = new Schema({
         required: true,
         default: Date.now(),
     }
-})
+});
 
 
 export interface User extends Document {  
@@ -65,7 +65,7 @@ const UserSchema: Schema<User> = new Schema({
         default:false,
     },
     messages:[MessageSchema],
-})
+},{timestamps: true});
 
 const UserModel = (mongoose.models.User as mongoose.Model<User>) || (mongoose.model<User>("User",UserSchema));
 

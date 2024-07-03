@@ -10,7 +10,7 @@ export async function GET(request:Request){
     await dbConnect()
     const session = await getServerSession(authOptions);
     const user :User = session?.user as User;
-
+    // console.log("User in get messages: ", user);
     if(!session || !session.user){
         return Response.json({
             success:false,
@@ -24,10 +24,10 @@ export async function GET(request:Request){
 
     try{
 
-        const user =await UserModel.aggregate([
+        const user_n =await UserModel.aggregate([
             {
                 $match:{
-                    id:UserId,
+                    _id:UserId,
                 }
             },
             {
@@ -45,16 +45,24 @@ export async function GET(request:Request){
                 }
             }
         ]);
-        if(!user || user.length===0) {
+        // console.log(user._id);
+        // console.log(UserId);
+        // console.log("Yo!! Get messages api ka user = ", user_n);
+        if(!user_n) {
             return Response.json({
                 success:false,
                 message:"User not found",
         },{status:401});
         }
-
+        if(user_n.length==0){
+                return Response.json({
+                    success:true,
+                    // message:"No Messages found",
+                },{status:200});
+            }
         return Response.json({
             success:true,
-            message: user[0].messages,
+            message: user_n[0].messages,
     },{status:200});
 
     }catch(err){

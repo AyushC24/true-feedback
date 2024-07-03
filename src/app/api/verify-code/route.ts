@@ -13,6 +13,7 @@ export async function POST(request:Request){
         const user = await UserModel.findOne({username:decodedUsername});
 
         if(!user){
+            console.log("User not found");
             return Response.json({
                 success:false,
                 message:"User not found",

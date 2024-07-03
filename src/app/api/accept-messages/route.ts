@@ -1,4 +1,4 @@
-import { getServerSession } from "next-auth";
+import { getServerSession } from "next-auth/next";
 import { authOptions } from "../auth/[...nextauth]/options";
 import dbConnect from "@/lib/dbConnect";
 import UserModel from "@/model/User";
@@ -6,6 +6,7 @@ import {User} from "next-auth"
 
 export async function POST(request:Request){
     await dbConnect()
+    // console.log("ABCDEFGHI");
     const session = await getServerSession(authOptions);
     const user :User = session?.user as User;
 
@@ -18,11 +19,12 @@ export async function POST(request:Request){
 
     const UserId = user._id;
     const {acceptMessages} = await request.json();
+    // console.log("Message Acceptance status: ", acceptMessages);
 
     try{
 
         const updatedUser = await UserModel.findByIdAndUpdate(UserId,{
-            isAcceptingMessages: acceptMessages,
+            isAcceptingMessage: acceptMessages,
         },{new:true});
         
         if(!updatedUser){
