@@ -25,7 +25,7 @@ function UserDashboard() {
   const [isSwitchLoading, setIsSwitchLoading] = useState(false);
 
   const { toast } = useToast();
-  const handleDeleteMessage = (messageId: string) => {
+  const handleDeleteMessage = (messageId:any) => {
     setMessages(messages.filter((message) => message._id !== messageId));
   };
 
@@ -66,7 +66,8 @@ function UserDashboard() {
       try {
         const response = await axios.get<ApiResponse>("/api/get-messages");
         // console.log("Get messages fetch ke baad: ",response);
-        if(response.data.message) setMessages(response.data.message || []);
+        if(Array.isArray(response.data.message)) setMessages(response.data.message);
+        else setMessages([]);
         if (refresh) {
           toast({
             title: "Refreshed Messages",
@@ -200,25 +201,7 @@ function UserDashboard() {
           ) : (
             <p>No messages to display.</p>
           )}
-        </div>
-        <div className="group fixed bottom-4 right-4 z-50">
-            <Link
-              href="/buy-me-a-coffee"
-              // target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/buymeacoffee.png"
-                alt="Buy Me a Coffee"
-                className="w-14 h-14"
-                width={14}
-                height={14}
-              />
-              <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black text-white text-xs rounded py-1 px-2 absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
-                Buy Me a Coffee
-              </span>
-            </Link>
-          </div>
+        </div>    
       </div>
     </>
   );

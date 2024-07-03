@@ -2,7 +2,7 @@
 "use client";
 import React, { useState } from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
-import profileIcon from "../../public/profileIcon.jpg";
+import profileIcon from "../../public/ProfileIcon.jpg";
 import { Router } from "next/router";
 import logoIcon from "../../public/logo.jpg";
 import { useRouter } from "next/navigation";
