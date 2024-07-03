@@ -99,8 +99,3 @@ export async function sendVerificationEmail(
     console.error('Error sending verification email:', emailError);
     return { success: false, message: 'Failed to send verification email.' };
   }
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> b250e3492b29459c34319bdd2c475508c1d08a2c
