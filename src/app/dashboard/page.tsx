@@ -66,7 +66,8 @@ function UserDashboard() {
       try {
         const response = await axios.get<ApiResponse>("/api/get-messages");
         // console.log("Get messages fetch ke baad: ",response);
-        if(response.data.message) setMessages(response.data.message || []);
+        if(Array.isArray(response.data.message)) setMessages(response.data.message);
+        else setMessages([]); 
         if (refresh) {
           toast({
             title: "Refreshed Messages",
