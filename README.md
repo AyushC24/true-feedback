@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# truefeedback.in
+
+truefeedback.in is a web application that allows users to sign up, log in, verify OTP, and share a link to receive messages directly. The site features AI-generated suggested messages using Google Generative AI, and users have control over message acceptance and viewing.
+
+## Features
+
+- User authentication and authorization using NextAuth.js
+- OTP verification for secure sign-up and login
+- Shareable links for receiving direct feedback
+- AI-generated suggested messages using Google Generative AI
+- User control over message acceptance and viewing
+- Dashboard to view all received messages
+
+## Technologies Used
+
+- **Frontend:**
+  - React.js
+  - Next.js
+  - CSS
+- **Backend:**
+  - Node.js
+  - Next.js
+- **Database:**
+  - MongoDB (Mongoose)
+- **Authentication:**
+  - NextAuth.js
+- **AI Integration:**
+  - Google Generative AI
+- **Others:**
+  - OTP verification using Nodemailer
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js
+- MongoDB
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/AyushC24/truefeedback.in.git
+   npm install
+2.Create a `.env` file in the root as shown in `.env.example` file
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3.Run the development Server npm run dev
 
-## Learn More
+4.Open http://localhost:3000 with your browser to see the result.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Web Images
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![image](https://github.com/AyushC24/true-feedback/assets/97463208/5699c1cb-a4fe-4b1e-9610-dfe70077e66f)
+![image](https://github.com/AyushC24/true-feedback/assets/97463208/8eb1b069-204e-4adf-b6c0-4af3a7af1a55)
+![image](https://github.com/AyushC24/true-feedback/assets/97463208/2f52d93f-5c61-48a5-9684-68bfc5ac7f6f)
+![image](https://github.com/AyushC24/true-feedback/assets/97463208/f6c0fabb-c181-4b64-b3a1-440c8d3558ad)
 
-## Deploy on Vercel
+### Contributing
+Contributions are welcome! Please fork the repository and create a pull request.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contact If you have any questions or feedback, feel free to reach out at ayushchandra73@gmail.com.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+### Copyright
+
+© 2024 Ayush Chandra. All rights reserved.
+
+
+
+
+
+
