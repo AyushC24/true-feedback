@@ -53,6 +53,7 @@ truefeedback.in is a web application that allows users to sign up, log in, verif
 
 ![image](https://github.com/AyushC24/true-feedback/assets/97463208/5699c1cb-a4fe-4b1e-9610-dfe70077e66f)
 ![image](https://github.com/AyushC24/true-feedback/assets/97463208/42c5f8d6-6610-4459-853a-aed61b118fdf)
+![image](https://github.com/AyushC24/true-feedback/assets/97463208/53a36772-f5b3-4ee5-99f9-e52d25ebba0c)
 
 ![image](https://github.com/AyushC24/true-feedback/assets/97463208/8eb1b069-204e-4adf-b6c0-4af3a7af1a55)
 ![image](https://github.com/AyushC24/true-feedback/assets/97463208/2f52d93f-5c61-48a5-9684-68bfc5ac7f6f)
