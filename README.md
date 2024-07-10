@@ -14,11 +14,9 @@ truefeedback.in is a web application that allows users to sign up, log in, verif
 ## Technologies Used
 
 - **Frontend:**
-  - React.js
   - Next.js
   - CSS
 - **Backend:**
-  - Node.js
   - Next.js
 - **Database:**
   - MongoDB (Mongoose)
